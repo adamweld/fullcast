@@ -4,14 +4,19 @@
 
 <h2>JavaScript Functions</h2>
 
-<p>This example calls a function to convert from Fahrenheit to Celsius:</p>
+<p>This example sources an image w/ JavaScript:</p>
 <p id="demo"></p>
 
+<img src="toCelsius(47.4264,-121.4173)" alt="Italian Trulli">
+
+
 <script>
-function toCelsius(f) {
-  return (5/9) * (f-32);
+function getUrl(lat, long) {
+    url_pre = "https://forecast.weather.gov/meteograms/Plotter.php?lat="
+    url_post = "&wfo=SEW&zcode=WAZ568&gset=20&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=11011111111110000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6"
+    return url_pre + lat + "&lon=" + lon + url_post
 }
-document.getElementById("demo").innerHTML = toCelsius(77);
+document.getElementById("demo").innerHTML = toCelsius(47.4264,-121.4173);
 </script>
 
 </body>
